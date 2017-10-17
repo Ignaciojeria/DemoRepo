@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
-public interface DocumentoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-}
+import com.example.demo.entity.Documento;
+
+public interface DocumentoRepository extends JpaRepository<Documento,Long> {}
