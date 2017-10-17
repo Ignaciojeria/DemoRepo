@@ -7,3 +7,5 @@ parte 3 Configurando las properties: https://www.youtube.com/watch?v=3WFAtrp3Bug
 parte 4 Creando las entidades: https://www.youtube.com/watch?v=Nsy69yfpVNg
 
 Parte 5 Acceso a datos: https://www.youtube.com/watch?v=zLHwL5hC3pA&feature=youtu.be
+
+Parte 6 Servicios:https://www.youtube.com/watch?v=fQ9jUWzCiEI&feature=youtu.be
