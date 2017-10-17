@@ -8,4 +8,8 @@ parte 4 Creando las entidades: https://www.youtube.com/watch?v=Nsy69yfpVNg
 
 Parte 5 Acceso a datos: https://www.youtube.com/watch?v=zLHwL5hC3pA&feature=youtu.be
 
-Parte 6 Servicios:https://www.youtube.com/watch?v=fQ9jUWzCiEI&feature=youtu.be
+Parte 6 Servicios: https://www.youtube.com/watch?v=fQ9jUWzCiEI&feature=youtu.be
+
+parte 7 Inicializando la base de datos: https://www.youtube.com/watch?v=H1ywGbi4bz4
+
+parte 8 Creando API REST: https://www.youtube.com/watch?v=Y2uS1rWE5Lc&feature=youtu.be

@@ -5,17 +5,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Documento;
-import com.example.demo.repository.DocumentoRepository;
+import com.example.demo.entity.Detalle;
+import com.example.demo.repository.DetalleRepository;
+
 
 @Service
 public class DetalleService {
 
 	@Autowired
-	private DocumentoRepository documentoRepository;
+	private DetalleRepository detalleRepository;
 	
-	public List<Documento> findAll(){
-		return documentoRepository.findAll();
+	public List<Detalle> findAll(){
+		return detalleRepository.findAll();
 	}
 	
+	public void save(Detalle detalle) {
+		detalleRepository.save(detalle);
+	}
 }

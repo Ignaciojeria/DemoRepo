@@ -20,4 +20,8 @@ public class DocumentoService {
 		return documentoRepository.findAll();
 	}
 	
+	public void save(Documento documento) {
+		documentoRepository.save(documento);
+	}
+	
 }
