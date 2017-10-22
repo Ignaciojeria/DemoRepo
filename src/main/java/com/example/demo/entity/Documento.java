@@ -2,9 +2,18 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import java.util.List;
+
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 public class Documento {
@@ -12,7 +21,10 @@ public class Documento {
 	@Id
 	@Column(name= "documento_id")
 	private long id;
+
 	
+
+	@JsonFormat(pattern="dd-MM-yyyy")
 	@Column(name="fecha")
 	private Date fecha;
 	
@@ -24,10 +36,16 @@ public class Documento {
 	
 	@Column(name="total")
 	private Double total;
-	
-	public Documento() {}
-	
 
+	@OneToMany (mappedBy = "documento")
+	private List<Detalle> detalles;
+
+
+
+
+	public Documento() {}
+
+	
 	public Documento(long id, Date fecha, long folio, String nombre_contacto, Double total) {
 		this.id = id;
 		this.fecha = fecha;
@@ -35,6 +53,7 @@ public class Documento {
 		this.nombre_contacto = nombre_contacto;
 		this.total = total;
 	}
+
 
 
 
@@ -76,6 +95,16 @@ public class Documento {
 
 	public void setTotal(Double total) {
 		this.total = total;
+	}
+
+
+	public List<Detalle> getDetalles() {
+		return detalles;
+	}
+
+
+	public void setDetalles(List<Detalle> detalles) {
+		this.detalles = detalles;
 	}
 	
 	

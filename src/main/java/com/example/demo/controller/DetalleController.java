@@ -15,30 +15,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Detalle;
 import com.example.demo.entity.Documento;
-import com.example.demo.servicio.DocumentoService;
+import com.example.demo.repository.DetalleRepository;
+import com.example.demo.servicio.DetalleService;
 
 @RestController
 @CrossOrigin(origins = "*")
-public class DocumentoController {
+public class DetalleController {
 
-	@Autowired DocumentoService documentoService;
+	@Autowired DetalleService detalleService;
 	
-	@GetMapping(value="documento")
-	public List<Documento> getAll(){
-		return documentoService.findAll();
+	@GetMapping(value="detalle")
+	public List<Detalle> getAll(){
+		return detalleService.findAll();
 	}
-	
-	@PostMapping(value="documento")
-	public ResponseEntity<Documento> persist(@RequestBody Documento documento) {
-		documentoService.save(documento);
-		return new ResponseEntity<Documento>(documento,HttpStatus.OK);
+
+
+	@DeleteMapping(value="detalle/{id}")
+	public ResponseEntity<Detalle> delete( @PathVariable(value="id") long id){
+		detalleService.delete(id);
+		return new ResponseEntity<Detalle>(HttpStatus.OK);
 	}
-	
-	@DeleteMapping(value="documento/{id}")
-	public ResponseEntity<Documento> delete( @PathVariable(value="id") long id){
-		documentoService.delete(id);
-		return new ResponseEntity<Documento>(HttpStatus.OK);
-	}
-	
 	
 }

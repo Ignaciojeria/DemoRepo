@@ -22,4 +22,12 @@ public class DetalleService {
 	public void save(Detalle detalle) {
 		detalleRepository.save(detalle);
 	}
+	
+	public void delete(long id) {
+		Detalle detalle=detalleRepository.findById(id);
+		detalleRepository.delete(detalle);
+	}
+	
+
+	
 }

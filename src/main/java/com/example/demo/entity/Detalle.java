@@ -1,9 +1,12 @@
 package com.example.demo.entity;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Detalle {
@@ -12,7 +15,9 @@ public class Detalle {
 	@Column(name="detalle_id")
 	private long id;
 	
-	@OneToOne
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="id_documento")
 	private Documento documento;
 	
 	@Column(name="unidad_medida")

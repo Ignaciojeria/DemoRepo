@@ -1,5 +1,7 @@
 package com.example.demo.fakemock;
 
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +15,9 @@ public class DetalleFakeMock {
 	private DetalleService detalleService;
 
 	public void setInitialData() {
-		detalleService.save(new Detalle(1L,new Documento(1,null,9878L,"Mr Robot",4.8),"US",9000,3,10.5," Servicios secretos"));
-		detalleService.save(new Detalle(2L,new Documento(2,null,9879L,"Teemo",4.8),"US",9000,3,10.5," Servicios secretos"));
-		detalleService.save(new Detalle(3L,new Documento(3,null,9879L,"Rick Sanchez",10.0),"US",9000,3,10.5," Servicios secretos"));
+		
+		detalleService.save(new Detalle(1L,new Documento(1,new GregorianCalendar(2015,10,10).getTime(),9878L,"Mr Robot",900000.0),"Pesos",100000,3,300000," Lavadora"));
+		detalleService.save(new Detalle(2L,new Documento(1,new GregorianCalendar(2015,10,10).getTime(),9878L,"Mr Robot",900000.0),"Pesos",300000,1,600000," Cama"));
+		detalleService.save(new Detalle(3L,new Documento(1,new GregorianCalendar(2015,10,10).getTime(),9878L,"Mr Robot",900000.0),"Pesos",300000,1,900000,"Smart Tv"));
 	}
 }
